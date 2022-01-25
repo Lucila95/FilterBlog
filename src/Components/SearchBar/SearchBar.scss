@@ -1,0 +1,113 @@
+#filterCategory {
+  background-color: #fff;
+}
+
+/*Search Container*/
+#searchBar {
+  background-color: #5b5b5b15;
+  box-shadow: 0px 0px 10px 1px #707070;
+  padding: 25px;
+  margin-bottom: 50px;
+  justify-content: center;
+  max-width: max-content;
+  background-color: #fff;
+}
+
+/*Active Category*/
+#filterCategory .btn-group .btn.btn-primary.active {
+  color: #fff;
+  background-color: #125e8a !important;
+  padding: 0px 35px;
+  border-radius: 0px;
+}
+
+/*Design of all categories*/
+#filterCategory .btn.btn-primary {
+  color: #2d2a26;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  font-size: 22px !important;
+}
+
+/*Input Search*/
+#InputSearch .ant-space.ant-space-vertical .ant-space-item {
+  margin: 25px 0px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+/*Button of search bar*/
+#btn-search {
+  background-color: #125e8a;
+  color: #fff !important;
+  min-height: 52px;
+  font-size: 20px;
+  border-color: transparent !important;
+}
+
+#inputSearch .ant-input-group-addon {
+  background-color: #c14953;
+  padding: 8px 30px;
+  color: #fff !important;
+}
+
+#inputSearch .ant-input-group-addon span {
+  font-size: 22px;
+}
+
+#inputSearch .ant-input {
+  padding: 15px !important;
+  background-color: rgba(91, 91, 91, 0.15);
+}
+
+#inputSearch ::placeholder {
+  color: #24392d;
+  font-size: 22px;
+}
+
+/*btn-search*/
+#searchBar #btn-search, #searchBar #btn-clearSearch {
+  font-size: 20px;
+  font-weight: 600;
+}
+/*icon of btn-search*/
+#btn-search span.anticon.anticon-search svg {
+  margin-top: -5px;
+}
+
+
+/*btn-searchClear*/
+#btn-clearSearch {
+  background-color: #F4B860;
+  color: #000 !important;
+  min-height: 52px;
+  font-size: 20px;
+  border-color: transparent !important;
+}
+/*icon of btn-searchClear*/
+//#btn-clearSearch span.anticon.anticon-search svg {
+  #blogFilter svg {
+    margin-top: -5px !important;
+}
+
+
+@media (max-width: 767px) {
+  #blogFilter .btn-group,
+  #blogFilter .btn-group-vertical {
+    flex-direction: column;
+    position: relative;
+    display: flex !important;
+    vertical-align: middle !important;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+  #blogFilter .btn-group,
+  #blogFilter .btn-group-vertical {
+    display: block !important;
+  }
+  #filterCategory .btn-group .btn.btn-primary {
+    font-size: 18px !important;
+  }
+}

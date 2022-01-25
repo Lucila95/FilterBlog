@@ -1,0 +1,53 @@
+#blogFilter {
+  @import "custom-variables.scss";
+  @import "bootstrap/scss/bootstrap.scss";
+  @import 'antd/dist/antd.css';
+
+  /*Design All Blog*/
+  .title-allBlog h3{
+    color: #C14953 !important;
+    font-size: 38px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    font-family: "Poppins";
+  }
+  .titleCard {
+    font-size: 22px;
+    font-family: "Poppins";
+    color: #2d2a26;
+  }
+  .fecha {
+    color: #979797;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .excerptBlog {
+    color: #111820;
+    font-size: 16px;
+  }
+  .btn-rm {
+    font-size: 18px;
+    color: #000000;
+    background-color: #f4b860;
+    border-color: #f4b860;
+    font-weight: bold;
+  }
+  .btn-rm:hover {
+    color: #fff;
+    background-color: #125e8a;
+    border-color: #125e8a;
+  }
+
+  .icSM i {
+    color: #125e8a;
+    font-size: 20px;
+    padding-right: 15px !important;
+  }
+  .card-img-top {
+    height: 300px;
+  }
+
+  .excerptBlog {
+    height:100px
+  }
+}
