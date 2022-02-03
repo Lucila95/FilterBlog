@@ -19,7 +19,7 @@ query getPostByCategory($categoryName: String!) {
           date
           featuredImage {
             node {
-             sourceUrl
+              mediaItemUrl
             }
           }
         }
@@ -33,7 +33,7 @@ export default function Perra() {
     const [data, setData] = useState(null)
     
     const { loading, error, data:categoryData } = useQuery(GETPOSTBYCATEGORY, {fetchPolicy:"network-only", variables: { categoryName: store.activeCategory } })
-
+    
     useEffect(() => {
         if(store.posts){
             setData(store.posts)
@@ -53,7 +53,7 @@ export default function Perra() {
                            <Player 
                           autoplay
                           loop
-                          src="https://rossainc.com/wp-content/uploads/2021/11/70780-no-result-found.json"
+                          src="/wp-content/uploads/2021/11/70780-no-result-found.json"
                           style={{ height: "300px", width: "300px" }}
                         >
                           <Controls
@@ -65,15 +65,26 @@ export default function Perra() {
                           </Col>
                          
                         : data.posts.edges.map((x, i) => {
+                            
                             return (
                                 < Col xs={12} sm={12} md={12} lg={4} key={i}>
                                     <Card className="md-ml-4 mb-5">
+                                        {
+                                            x.node.featuredImage !==null ?
+                                            <CardImg
+                                            alt="Card image cap"
+                                            src={x.node.featuredImage.node.mediaItemUrl}
+                                            top
+                                            width="100%"
+                                        /> :
                                         <CardImg
                                             alt="Card image cap"
-                                            src={x.node.featuredImage.node.sourceUrl}
+                                            src="/wp-content/uploads/2022/02/jmolina-law-firm.jpg"
                                             top
                                             width="100%"
                                         />
+                                        }
+                                        
                                         <CardBody>
                                             <div className="d-flex flex-row align-items-center justify-content-between">
                                                 <div>
